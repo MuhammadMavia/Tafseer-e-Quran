@@ -1,0 +1,177 @@
+Index: www/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- www/index.html	(revision )
++++ www/index.html	(revision )
+@@ -12,36 +12,7 @@
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+ 
+-  <link rel="stylesheet" href="../jPlayer-2.9.2/lib/circle-player/skin/circle.player.css">
+-  <script type="text/javascript" src="../jPlayer-2.9.2/lib/jquery.min.js"></script>
+-  <script type="text/javascript" src="../jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js"></script>
+-  <script type="text/javascript" src="../jPlayer-2.9.2/lib/circle-player/js/jquery.transform2d.js"></script>
+-  <script type="text/javascript" src="../jPlayer-2.9.2/lib/circle-player/js/jquery.grab.js"></script>
+-  <script type="text/javascript" src="../jPlayer-2.9.2/lib/circle-player/js/mod.csstransforms.min.js"></script>
+-  <script type="text/javascript" src="../jPlayer-2.9.2/lib/circle-player/js/circle.player.js"></script>
+ 
+-<!--  <script type="text/javascript">
+-    //<![CDATA[
+-
+-    $(document).ready(function(){
+-
+-
+-      var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1",
+-              {
+-                m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+-                oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+-              }, {
+-                cssSelectorAncestor: "#cp_container_1",
+-                swfPath: "../../dist/jplayer",
+-                wmode: "window",
+-                keyEnabled: true
+-              });
+-    });
+-    //]]>
+-  </script>-->
+-
+-
+-
+ </head>
+ 
+ <body>
+@@ -53,6 +24,7 @@
+ 
+ <ion-nav-view></ion-nav-view>
+ 
++<!--Navigation Start-->
+ 
+ <script id="templates/tabs.html" type="text/ng-template">
+   <ion-tabs class="tabs-icon-top tabs-positive">
+@@ -72,43 +44,69 @@
+   </ion-tabs>
+ </script>
+ 
++<!--Navigation End-->
++
++<!--Home-->
++
+ <script id="templates/home.html" type="text/ng-template">
+   <ion-view view-title="Home">
+     <ion-content class="padding">
+-
+-
+       <p>
+-        <a class="button icon icon-right ion-chevron-right" href="#/tab/surah">Scientific Facts</a>
++        <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Surah</a>
+       </p>
+     </ion-content>
+   </ion-view>
+ </script>
+ 
+-<!--<script id="templates/facts.html" type="text/ng-template">
+-  <ion-view view-title="Facts">
+-    <ion-content class="padding">
++<!--Home-->
+ 
+ 
++<!--Surah Page-->
+ 
++<script id="templates/facts.html" type="text/ng-template">
++  <ion-view view-title="Facts">
++    <ion-content class="padding">
+ 
++
+       <p>
+         <a class="button icon ion-home" href="#/tab/home"> Home</a>
+-        <a class="button icon icon-right ion-chevron-right" href="#/tab/facts2">More Facts</a>
++        <a class="button icon icon-right ion-chevron-right" href="#/tab/facts2">Surah Fatiha</a>
+       </p>
+     </ion-content>
+   </ion-view>
+-</script>-->
++</script>
+ 
++<!--Surah Page-->
++
++
++<!--Surah-->
++
+ <script id="templates/facts2.html" type="text/ng-template">
+   <ion-view view-title="Also Factual">
+     <ion-content class="padding">
+-      <p style="font-size: 30px; line-height: 30px; text-align: right">
+ 
+-      </p>
+ 
++      <!--<ion-scroll zooming="true" direction="xy" style="width: 500px; height: 500px">
++        <div style="width: 5000px; height: 5000px; background: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/Europe_geological_map-en.jpg') repeat"></div>
++      </ion-scroll>-->
+ 
+ 
++<br>
++      <img class="img-responsive" src="img/fatiha.jpg" zooming="true" direction="xy" style="width: 500px; height: 500px">
++<br>
+       <p>
++        <audio controls="controls">
++          <source src="http://www.khatmeqadria.net/khushgawar_zindagi/para1/0010_surah%20al-fatiha.mp3" type="audio/mpeg">
++          <source src="http://www.khatmeqadria.net/khushgawar_zindagi/para1/0010_surah%20al-fatiha.mp3" type="audio/ogg">
++
++        </audio>
++
++
++      </p>
++
++
++
++
+         <a class="button icon ion-home" href="#/tab/home"> Home</a>
+         <a class="button icon ion-chevron-left" href="#/tab/facts"> Scientific Facts</a>
+       </p>
+@@ -116,8 +114,11 @@
+   </ion-view>
+ </script>
+ 
+-<!--Home End-->
++<!--Surah-->
+ 
++
++<!--About-->
++
+ <script id="templates/about.html" type="text/ng-template">
+   <ion-view view-title="About">
+     <ion-content class="padding">
+@@ -131,6 +132,10 @@
+   </ion-view>
+ </script>
+ 
++<!--About-->
++
++
++
+ <script id="templates/nav-stack.html" type="text/ng-template">
+   <ion-view view-title="Tab Nav Stack">
+     <ion-content class="padding">
+@@ -144,10 +149,10 @@
+     <ion-content>
+       <div class="list">
+         <div class="item">
+-          Mass Training Department
++          @IonicFramework
+         </div>
+         <div class="item">
+-          Batch 01 Team
++          @DriftyTeam
+         </div>
+       </div>
+     </ion-content>
+@@ -155,4 +160,6 @@
+ </script>
+ 
+ </body>
++
++
+ </html>
+\ No newline at end of file
